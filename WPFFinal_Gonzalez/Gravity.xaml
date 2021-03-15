@@ -1,0 +1,45 @@
+﻿<Window x:Class="WPFFinal_Gonzalez.Gravity"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFFinal_Gonzalez"
+        mc:Ignorable="d"
+        Title="Gravity" Height="450" Width="800">
+    <Canvas x:Name="CanGrav">
+        <TextBlock x:Name="GravText" Canvas.Top="-20" Canvas.Left="250" FontSize="72" FontWeight="Bold">
+            <Run Text="GRAVITY"/>
+            <TextBlock.Triggers>
+                <EventTrigger RoutedEvent="Window.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation
+                                Storyboard.TargetName="GravText"
+                                Storyboard.TargetProperty="(Canvas.Top)"
+                                From="50" To="325"
+                                Duration="00:00:5"
+                                >
+                                <DoubleAnimation.EasingFunction>
+                                    <BounceEase
+                                       Bounces="7"
+                                        Bounciness="2"
+                                        />
+                                </DoubleAnimation.EasingFunction>
+                            </DoubleAnimation>
+                            <DoubleAnimation
+                                Storyboard.TargetName="GravText"
+                                Storyboard.TargetProperty="(Canvas.Top)"
+                                From="325" To="600"
+                                Duration="00:00:1"
+                                BeginTime="00:00:7"
+                                 />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </TextBlock.Triggers>
+        </TextBlock>
+        <Button x:Name="Main" Content="Go To Main" Canvas.Left="51" Canvas.Top="353" Height="35" Width="81" Click="Main_Click"/>
+        <Button x:Name="HelloButn" Content="Hello World Animation" Canvas.Left="583" Canvas.Top="348" Height="35" Width="178" Click="Hello_Click" />
+        <Button x:Name="Quit" Content="Quit" Canvas.Left="333" Canvas.Top="353" Height="35" Width="56" Click="Quit_Click"/>
+    </Canvas>
+</Window>

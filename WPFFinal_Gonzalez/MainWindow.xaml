@@ -1,0 +1,20 @@
+﻿<Window x:Class="WPFFinal_Gonzalez.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFFinal_Gonzalez"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+ 
+    <Canvas>    
+        <TextBox x:Name="TextClone" Canvas.Left="309" Canvas.Top="117">Enter Something here</TextBox>
+        <TextBlock IsEnabled="False" Text="{Binding Text, ElementName=TextClone}" Canvas.Left="309" Canvas.Top="182"/>
+        <Label Content="Enter Text To Display:" Canvas.Left="174" Canvas.Top="113"/>
+        <Button x:Name="GravButn" Content="Go To Gravity" Canvas.Left="51" Canvas.Top="353" Height="35" Width="81" Click="GravButn_Click"/>
+        <Button x:Name="HelloButn" Content="Hello World Animation" Canvas.Left="583" Canvas.Top="348" Height="35" Width="178" Click="Hello_Click" />
+        <Button x:Name="Quit" Content="Quit" Canvas.Left="333" Canvas.Top="353" Height="35" Width="56" Click="Quit_Click"/>
+    </Canvas>
+
+</Window>
